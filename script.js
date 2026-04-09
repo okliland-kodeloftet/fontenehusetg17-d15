@@ -1,5 +1,6 @@
 console.log("Hello World!");
 
+/*
 const hamburgerIcon = document.querySelector("#hamburgerIcon");
 console.log(hamburgerIcon);
 
@@ -64,3 +65,22 @@ const ProjectsShowMore = document.querySelector("#projectsShowMore")
 
 aboutShowMore.addEventListener("click", showMoreToggle)
 ProjectsShowMore.addEventListener("click", showMoreToggle)
+
+*/
+
+// 
+// 
+
+const sendButton = document.querySelector("#sendButton");
+console.log(sendButton)
+
+sendButton.addEventListener("click", function (){
+  const userInput = document.querySelector("#userInput").value
+  const inputDisplay = document.querySelector("#inputDisplay")
+  console.log(userInput, inputDisplay)
+
+  const newItem = document.createElement("li")
+  newItem.textContent = userInput
+
+  inputDisplay.appendChild(newItem);
+})
