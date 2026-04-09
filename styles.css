@@ -1,0 +1,245 @@
+/* GLOBAL */
+:root {
+  --darkColor: #000;
+  --lightColor: #fff;
+  --primaryColor: #5f506b;
+  --secondaryColor: #76949f;
+  --accentPrimColor: #6a6b83;
+  --accentSecColor: #86bbbd;
+
+  --defaultSpacing: 1.6rem;
+
+  --defaultFontFamily: "Roboto";
+}
+
+html {
+  /* Standard font-size er 16px. 16px = 1em */
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--defaultFontFamily);
+  color: var(--darkColor);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue";
+}
+
+img {
+  width: 20rem;
+  height: 20rem;
+  background-color: var(--primaryColor);
+}
+
+/* NY */
+button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 2px solid var(--accentPrimColor);
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid var(--primaryColor);
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--lightColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 1.6rem;
+}
+
+.navList {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 1.6rem;
+  list-style-type: none;
+}
+
+.navList a {
+  text-decoration: none;
+  cursor: pointer; /* Skjer automatisk, ikke nødvendig å ha med */
+  color: var(--darkColor);
+}
+
+.navList a:hover {
+  text-decoration: underline;
+  color: var(--accentSecColor);
+}
+
+.hamburgerIcon {
+  height: 3.2rem;
+  width: 3.2rem;
+  display: none;
+  background-color: initial;
+}
+
+/* MAIN */
+main {
+  padding: 0 1.6rem;
+}
+
+/* Hero */
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroIntro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+/* NY */
+.heroIntroContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30rem;
+}
+
+.heroImg {
+  width: 30rem;
+}
+
+/* About */
+.about {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.aboutTextContainer,
+.aboutImgContainer {
+  min-width: 50%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutText {
+  width: 30rem;
+}
+
+.aboutImg {
+  width: 30rem;
+}
+
+.aboutImgText {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 6px;
+}
+
+/* Projects */
+.projects {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.projectsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.projectCard {
+  height: 40rem;
+  width: 30rem;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0 1.6rem; /* For å få ramme rundt */
+  border-top: 2px solid var(--primaryColor);
+}
+
+.credits {
+}
+
+/* MEDIA QUERY */
+@media (max-width: 426px) {
+  /* HEADER */
+  .headerNav {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .navList {
+    display: none;
+  }
+
+  .navHamburgerList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .hamburgerIcon {
+    display: inline;
+  }
+
+  /* MAIN */
+  .heroIntro {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .projectsList {
+    flex-direction: column;
+  }
+
+  /* FOOTER */
+}
