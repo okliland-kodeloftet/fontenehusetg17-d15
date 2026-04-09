@@ -115,6 +115,11 @@ main {
   align-items: center;
 }
 
+.popUpBorder{
+  border: 2px solid red;
+  
+}
+
 .heroText {
   display: flex;
   justify-content: center;
